@@ -1,6 +1,6 @@
-# ProductosCycle Api
+# Tickets Api
 
-API REST de la aplicación de productos referente a la prueba tecnica de Cycle
+API REST CRUD de tickets
 
 ## Autor 🖋️
 
@@ -11,7 +11,7 @@ Sergio Mercado Salazar
 
 ## Requisitos
 
-- .NET 6 SDK
+- .NET 8
 - Visual Studio Community 2022
 - SQL Server
 
