@@ -33,7 +33,7 @@ namespace TicketsApi.Controllers
             }
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<TicketDto>> GetById(int id)
         {
             try
@@ -43,7 +43,11 @@ namespace TicketsApi.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new { error = "Ocurrió un error al obtener el ticket.", details = ex.Message });
+                return StatusCode(500, new
+                {
+                    error = "Ocurrió un error al obtener el ticket.",
+                    details = ex.Message
+                });
             }
         }
 

@@ -24,7 +24,7 @@ public partial class TicketsApiContext : DbContext
     {
         modelBuilder.Entity<TicketsApi.Models.Ticket>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK_Productos");
+            entity.HasKey(e => e.Id).HasName("PK_Ticket");
 
             entity.ToTable("Ticket");
 
@@ -32,8 +32,11 @@ public partial class TicketsApiContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
             entity.Property(e => e.Status)
-                .HasMaxLength(150)
-                .IsUnicode(false);
+           .HasConversion(
+               v => v.ToString(),
+               v => (TicketStatus)Enum.Parse(typeof(TicketStatus), v))
+           .HasMaxLength(150)
+           .IsUnicode(false);
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");

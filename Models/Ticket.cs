@@ -2,8 +2,8 @@
 {
     public enum TicketStatus
     {
-        Abierto = 0,
-        Cerrado = 1
+        Abierto,
+        Cerrado
     }
 
     public class Ticket

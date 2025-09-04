@@ -15,8 +15,9 @@ namespace TicketsApi.Repositories
 
         public IQueryable<TicketsApi.Models.Ticket> Query() => dbContext.Tickets.AsQueryable();
 
-        public async Task<TicketsApi.Models.Ticket?> GetByIdAsync(int id) =>
-            await dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == id);
+        public async Task<TicketsApi.Models.Ticket?> GetByIdAsync(int id) {
+            return await dbContext.Tickets.FirstOrDefaultAsync(t => t.Id == id);
+        }
 
         public async Task AddAsync(TicketsApi.Models.Ticket ticket)
         {
