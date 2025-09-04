@@ -18,7 +18,7 @@ Sergio Mercado Salazar
 ## Instalación
 
 1. Clonar el repositorio
-   `git clone https://github.com/mercadosergio/productos_cycle_api.git`
+   `git clone https://github.com/mercadosergio/tickets-api.git`
 
 2. Una vez clonado el repositorio, debe crear la base de datos en un entorno SQL SERVER y ejecutar los scripts SQL que se encuentran en el archivo `TicketsApi_Scripts.sql` en un entorno SQL SERVER.
 
